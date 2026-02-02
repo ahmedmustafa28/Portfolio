@@ -1100,6 +1100,13 @@ section {
     margin-top: 30px;
 }
 
+a.certificate-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .certificate-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
