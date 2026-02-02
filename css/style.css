@@ -181,12 +181,13 @@ strong {
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     background: linear-gradient(135deg, var(--primary-light), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
 }
 
 .nav-links {
