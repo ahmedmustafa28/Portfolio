@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ahmed Mustafa - Software Engineering student at MUET specializing in C++ development and visual design. Open for internship opportunities.">
+    <meta name="keywords" content="Ahmed Mustafa, Software Engineer, MUET, C++ Developer, Visual Designer, Portfolio">
+    <meta name="author" content="Ahmed Mustafa">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ahmed Mustafa | Software Engineer & Visual Designer">
+    <meta property="og:description" content="Software Engineering student at MUET building efficient solutions with C++ and creating compelling visual experiences.">
+    <meta property="og:url" content="https://ahmedmustafa.dev">
+    <meta property="og:image" content="og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmed Mustafa | Software Engineer">
+    <meta name="twitter:description" content="Software Engineering student at MUET. Open for internship opportunities.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    
+    <title>Ahmed Mustafa | Software Engineer & Visual Designer</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="Ahmed Mustafa - Home">
+                <span class="logo-text">AM</span>
+            </a>
+            <ul class="nav-links" id="nav-links" role="menubar">
+                <li role="none"><a href="#home" class="active" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home" aria-labelledby="hero-heading">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hi, I'm</p>
+                    <h1 class="name" id="hero-heading">Ahmed Mustafa</h1>
+                    <h2 class="tagline">
+                        Where <span class="highlight" id="dynamic-text">code meets creativity</span>
+                    </h2>
+                    <p class="hero-description">
+                        Software Engineering student at <strong>MUET</strong> combining <strong>technical expertise</strong> 
+                        with <strong>creative vision</strong>. I'm passionate about leveraging technology to solve 
+                        real-world problems and turning ideas into impactful solutions.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            Get In Touch
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years at MUET</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Director</span>
+                            <span class="stat-label">of Visuals</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Tech +</span>
+                            <span class="stat-label">Creative</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="Picture.png" alt="Ahmed Mustafa profile photo" class="profile-photo">
+                        </div>
+                        <div class="profile-status">
+                            <span class="status-dot"></span>
+                            <span>Open to Opportunities</span>
+                        </div>
+                    </div>
+                    <div class="social-sidebar">
+                        <a href="https://linkedin.com/in/ahmed-mustafa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ahmedmustafa" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:bhurgrimustafa203@gmail.com" aria-label="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <div class="social-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">Get to Know Me</span>
+                    <h2 class="section-title" id="about-heading">About Me</h2>
+                </header>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="Picture.png" alt="Ahmed Mustafa" class="about-photo">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Technical Mind, Creative Heart</h3>
+                        <p>
+                            I'm a <strong>Software Engineering</strong> student at Mehran University of 
+                            Engineering and Technology (MUET), building a strong foundation in 
+                            <strong>programming, data structures, and problem-solving</strong>. What makes me different? 
+                            I don't just write code—I think about how technology can solve real-world problems.
+                        </p>
+                        <p>
+                            As <strong>Director of Visuals at WOH Sindh Chapter</strong>, I lead visual content creation 
+                            and design strategy, managing a team of creative professionals. I coordinate with cross-functional 
+                            teams to develop compelling visual narratives for events and campaigns, while mentoring junior 
+                            members in design principles and visual communication.
+                        </p>
+                        <p>
+                            This unique blend of <strong>technical leadership</strong> and <strong>creative execution</strong> 
+                            allows me to approach problems from multiple angles. I'm actively seeking <strong>internship 
+                            opportunities</strong> to apply and expand my skills in a professional environment.
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Hyderabad, Sindh, Pakistan</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                                <span>B.E. Software Engineering, MUET (2027)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                                <span>Actively seeking internships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education" id="education" aria-labelledby="education-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">My Journey</span>
+                    <h2 class="section-title" id="education-heading">Education</h2>
+                </header>
+                <div class="education-grid">
+                    <article class="education-card featured">
+                        <div class="edu-icon">
+                            <i class="fas fa-university" aria-hidden="true"></i>
+                        </div>
+                        <div class="edu-content">
+                            <span class="edu-date">Aug 2023 – May 2027</span>
+                            <h3>Bachelor of Engineering in Software Engineering</h3>
+                            <h4>Mehran University of Engineering and Technology</h4>
+                            <p class="edu-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Sindh</p>
+                            <div class="edu-details">
+                                <h5>Key Coursework:</h5>
+                                <ul>
+                                    <li>Data Structures & Algorithms</li>
+                                    <li>Object-Oriented Programming (C++)</li>
+                                    <li>Database Management Systems</li>
+                                    <li>Software Design & Architecture</li>
+                                    <li>Computer Networks</li>
+                                </ul>
+                            </div>
+                            <div class="edu-tags">
+                                <span>C++</span>
+                                <span>DSA</span>
+                                <span>OOP</span>
+                                <span>DBMS</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="education-card">
+                        <div class="edu-icon secondary">
+                            <i class="fas fa-school" aria-hidden="true"></i>
+                        </div>
+                        <div class="edu-content">
+                            <span class="edu-date">Aug 2011 – Aug 2020</span>
+                            <h3>Matriculation in General Science</h3>
+                            <h4>IBA Community College Dadu</h4>
+                            <p class="edu-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dadu, Sindh</p>
+                            <p class="edu-note">Foundation in mathematics and sciences that sparked my interest in technology and problem-solving.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience" id="experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">Where I've Contributed</span>
+                    <h2 class="section-title" id="experience-heading">Experience</h2>
+                </header>
+                <div class="experience-timeline">
+                    <article class="experience-item">
+                        <div class="exp-marker">
+                            <div class="exp-dot"></div>
+                            <div class="exp-line"></div>
+                        </div>
+                        <div class="exp-card">
+                            <header class="exp-header">
+                                <div class="exp-title-group">
+                                    <h3>Director of Visuals</h3>
+                                    <h4>WOH Sindh Chapter</h4>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="exp-badge current">Current Role</span>
+                                    <span class="exp-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Hyderabad</span>
+                                </div>
+                            </header>
+                            <div class="exp-body">
+                                <p class="exp-summary">
+                                    Combining technical expertise with creative vision to lead visual strategy for a 
+                                    university chapter dedicated to community development and technology awareness.
+                                </p>
+                                <ul class="exp-achievements">
+                                    <li>
+                                        <strong>Lead visual content creation and design strategy</strong> for the chapter, 
+                                        managing a team of creative professionals across multiple projects
+                                    </li>
+                                    <li>
+                                        <strong>Coordinate with cross-functional teams</strong> to develop compelling 
+                                        visual narratives for events and campaigns that resonate with the community
+                                    </li>
+                                    <li>
+                                        <strong>Implement design standards and workflows</strong> to ensure consistent 
+                                        brand representation across all platforms and communications
+                                    </li>
+                                    <li>
+                                        <strong>Mentor junior members</strong> in design principles and visual communication 
+                                        best practices, fostering growth within the team
+                                    </li>
+                                </ul>
+                                <div class="exp-skills">
+                                    <span>Team Leadership</span>
+                                    <span>Figma</span>
+                                    <span>Brand Design</span>
+                                    <span>Project Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="experience-item">
+                        <div class="exp-marker">
+                            <div class="exp-dot"></div>
+                        </div>
+                        <div class="exp-card">
+                            <header class="exp-header">
+                                <div class="exp-title-group">
+                                    <h3>Active Member</h3>
+                                    <h4>WOH Sindh Chapter</h4>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="exp-date">Aug 2023 – Present</span>
+                                </div>
+                            </header>
+                            <div class="exp-body">
+                                <ul class="exp-achievements">
+                                    <li><strong>Actively participate</strong> in technical workshops, seminars, and community outreach programs</li>
+                                    <li><strong>Collaborate on initiatives</strong> promoting technology education and awareness in the Sindh region</li>
+                                    <li><strong>Engage with the tech community</strong> to learn, share knowledge, and contribute to collective growth</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">What I've Built</span>
+                    <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+                    <p class="section-description">A selection of projects that showcase my problem-solving approach and technical skills.</p>
+                </header>
+                <div class="projects-grid">
+                    <!-- Featured Project -->
+                    <article class="project-card featured">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View source code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                                <a href="#" class="project-link primary" aria-label="View live demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Featured Project</span>
+                            <h3>Student Management System</h3>
+                            <div class="project-description">
+                                <p><strong>Problem:</strong> Manual student record management was time-consuming and error-prone for academic administrators.</p>
+                                <p><strong>Solution:</strong> Built a console-based C++ application with file handling for persistent storage, implementing CRUD operations with data validation and search functionality.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>C++</span>
+                                <span>File I/O</span>
+                                <span>OOP</span>
+                                <span>Data Structures</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder alt">
+                                <i class="fas fa-calculator" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View source code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Algorithm Visualizer</h3>
+                            <div class="project-description">
+                                <p>Interactive tool demonstrating sorting algorithms (Bubble, Quick, Merge) with step-by-step visualization to aid learning.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>C++</span>
+                                <span>Algorithms</span>
+                                <span>DSA</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder alt-2">
+                                <i class="fas fa-palette" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View project details">
+                                    <i class="fas fa-eye"></i>
+                                    <span>View</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>WOH Sindh Brand System</h3>
+                            <div class="project-description">
+                                <p>Comprehensive visual identity including logo variations, color palette, typography guidelines, and social media templates.</p>
+                            </div>
+                            <div class="project-tech">
+                                <span>Figma</span>
+                                <span>Brand Design</span>
+                                <span>UI/UX</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="projects-cta">
+                    <a href="https://github.com/ahmedmustafa" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        View All Projects on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">My Toolkit</span>
+                    <h2 class="section-title" id="skills-heading">Skills & Technologies</h2>
+                </header>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            <h3>Programming</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level learning">Learning</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level learning">Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <h3>Web Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-level comfortable">Comfortable</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-level comfortable">Comfortable</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level learning">Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-level comfortable">Comfortable</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Linux/Terminal</span>
+                                <span class="skill-level comfortable">Comfortable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-palette" aria-hidden="true"></i>
+                            <h3>Design</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Figma</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Canva</span>
+                                <span class="skill-level proficient">Proficient</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Adobe Photoshop</span>
+                                <span class="skill-level comfortable">Comfortable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="soft-skills">
+                    <h3>Also Strong In</h3>
+                    <div class="soft-skills-list">
+                        <span>Team Leadership</span>
+                        <span>Visual Communication</span>
+                        <span>Problem Solving</span>
+                        <span>Project Management</span>
+                        <span>Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">Let's Connect</span>
+                    <h2 class="section-title" id="contact-heading">Get In Touch</h2>
+                    <p class="section-description">
+                        I'm passionate about leveraging technology to solve real-world problems and actively seeking 
+                        internship opportunities to apply and expand my skills. Let's discuss how I can contribute to your team.
+                    </p>
+                </header>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h3>Reach Out Directly</h3>
+                            <div class="contact-methods">
+                                <a href="mailto:bhurgrimustafa203@gmail.com" class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="method-details">
+                                        <span class="method-label">Email</span>
+                                        <span class="method-value">bhurgrimustafa203@gmail.com</span>
+                                    </div>
+                                    <i class="fas fa-arrow-right method-arrow" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/ahmed-mustafa" target="_blank" rel="noopener noreferrer" class="contact-method">
+                                    <div class="method-icon linkedin">
+                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="method-details">
+                                        <span class="method-label">LinkedIn</span>
+                                        <span class="method-value">Connect with me</span>
+                                    </div>
+                                    <i class="fas fa-arrow-right method-arrow" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://github.com/ahmedmustafa" target="_blank" rel="noopener noreferrer" class="contact-method">
+                                    <div class="method-icon github">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="method-details">
+                                        <span class="method-label">GitHub</span>
+                                        <span class="method-value">Check out my code</span>
+                                    </div>
+                                    <i class="fas fa-arrow-right method-arrow" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            <div class="contact-location">
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                <span>Hyderabad, Sindh, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Doe">
+                                    <span class="error-message" aria-live="polite"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Your Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
+                                    <span class="error-message" aria-live="polite"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                                <span class="error-message" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, opportunity, or just say hi..."></textarea>
+                                <span class="error-message" aria-live="polite"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading" aria-hidden="true">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Sending...
+                                </span>
+                                <i class="fas fa-paper-plane btn-icon" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">AM</a>
+                    <p class="footer-tagline">Building solutions, one line of code at a time.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/ahmed-mustafa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/ahmedmustafa" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:bhurgrimustafa203@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Ahmed Mustafa. Crafted with care in Hyderabad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
