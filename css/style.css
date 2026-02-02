@@ -1090,33 +1090,33 @@ section {
 /* ===== Certificates Section ===== */
 .certificates {
     background: var(--bg-secondary);
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
 }
 
 .certificate-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     overflow: hidden;
     transition: var(--transition);
 }
 
 .certificate-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     border-color: var(--primary);
-    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
 }
 
 .certificate-image {
     width: 100%;
-    height: 180px;
+    height: 120px;
     overflow: hidden;
     position: relative;
 }
@@ -1142,27 +1142,27 @@ section {
 }
 
 .cert-placeholder i {
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
 .certificate-content {
-    padding: 20px;
+    padding: 14px;
 }
 
 .certificate-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
     color: var(--text-primary);
 }
 
 .cert-issuer {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .cert-issuer i {
@@ -1172,11 +1172,11 @@ section {
 .cert-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
 .cert-tags span {
-    padding: 4px 12px;
+    padding: 3px 10px;
     background: var(--bg-tertiary);
     border-radius: 50px;
     font-size: 0.75rem;
