@@ -223,12 +223,37 @@ contactForm.addEventListener('submit', async (e) => {
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Get form data
+    const formData = new FormData(contactForm);
     
-    // Success
-    showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
-    contactForm.reset();
+    try {
+        // Submit to Formspree
+        const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            // Success
+            showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+            contactForm.reset();
+        } else {
+            // Server error
+            const data = await response.json();
+            if (data.errors) {
+                showToast(data.errors.map(err => err.message).join(', '), 'error');
+            } else {
+                showToast('Oops! Something went wrong. Please try again.', 'error');
+            }
+        }
+    } catch (error) {
+        // Network error
+        console.error('Form submission error:', error);
+        showToast('Network error. Please check your connection and try again.', 'error');
+    }
     
     submitBtn.classList.remove('loading');
     submitBtn.disabled = false;
