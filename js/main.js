@@ -314,39 +314,63 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Intersection Observer for Animations =====
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// ===== Scroll Reveal Animation =====
+const revealElements = () => {
+    // Select all elements to animate
+    const elementsToReveal = document.querySelectorAll(`
+        .section-header,
+        .hero-text,
+        .hero-visual,
+        .about-content > *,
+        .education-card,
+        .experience-item,
+        .project-card,
+        .skill-category,
+        .soft-skills,
+        .certificate-card,
+        .contact-card,
+        .contact-form-wrapper
+    `);
 
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            fadeInObserver.unobserve(entry.target);
+    // Add reveal class to all elements
+    elementsToReveal.forEach(el => {
+        if (!el.classList.contains('reveal')) {
+            el.classList.add('reveal');
         }
     });
-}, observerOptions);
 
-// Add fade-in animation to elements
-document.querySelectorAll('.education-card, .exp-card, .project-card, .skill-category, .contact-card, .contact-form-wrapper').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    fadeInObserver.observe(el);
+    // Add stagger class to grid containers
+    document.querySelectorAll('.projects-grid, .certificates-grid, .skills-grid').forEach(el => {
+        el.classList.add('reveal-stagger');
+    });
+
+    // Create observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                // Unobserve after revealing (animation plays once)
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all reveal elements
+    document.querySelectorAll('.reveal, .reveal-stagger, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+        revealObserver.observe(el);
+    });
+};
+
+// Initialize reveal animations after DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    // Small delay to ensure styles are applied
+    setTimeout(revealElements, 100);
 });
-
-// Add visible styles
-const style = document.createElement('style');
-style.textContent = `
-    .education-card.visible, .exp-card.visible, .project-card.visible, 
-    .skill-category.visible, .contact-card.visible, .contact-form-wrapper.visible {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-`;
-document.head.appendChild(style);
 
 // ===== Keyboard Navigation =====
 document.addEventListener('keydown', (e) => {
