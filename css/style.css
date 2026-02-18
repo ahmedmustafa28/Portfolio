@@ -33,6 +33,25 @@
     --radius-xl: 24px;
 }
 
+/* ===== Light Mode ===== */
+[data-theme="light"] {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f1f5f9;
+    --bg-card: #ffffff;
+    
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    
+    --border: #e2e8f0;
+    --border-light: #cbd5e1;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
     margin: 0;
@@ -244,6 +263,100 @@ strong {
         display: inline-flex;
         margin-top: 20px;
     }
+}
+
+/* ===== Theme Toggle Button ===== */
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--border-light);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    margin-left: 12px;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: rotate(15deg);
+}
+
+[data-theme="light"] .theme-toggle {
+    background: var(--bg-card);
+    border-color: var(--border);
+}
+
+/* Light mode specific adjustments */
+[data-theme="light"] .navbar {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+[data-theme="light"] .logo-text {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="light"] .hero {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-tertiary) 50%, var(--bg-primary) 100%);
+}
+
+[data-theme="light"] .project-overlay {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="light"] .footer {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+[data-theme="light"] .footer-tagline,
+[data-theme="light"] .footer-bottom p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="light"] .footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="light"] .footer-social a {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .footer-social a .fa-linkedin-in {
+    color: #0A66C2;
+}
+
+[data-theme="light"] .footer-social a .fa-github {
+    color: #ffffff;
+}
+
+[data-theme="light"] .footer-social a .fa-envelope {
+    color: #EA4335;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+.nav-links a {
     font-size: 0.9rem;
     position: relative;
     padding: 4px 0;
@@ -458,12 +571,47 @@ strong {
     border-radius: 50%;
     color: var(--text-secondary);
     font-size: 1rem;
+    transition: var(--transition);
+}
+
+/* Social Brand Colors */
+.social-sidebar a .fa-linkedin-in,
+.footer-social a .fa-linkedin-in,
+.contact-social a .fa-linkedin-in,
+.hero-social a .fa-linkedin-in {
+    color: #0A66C2;
+}
+
+.social-sidebar a .fa-github,
+.footer-social a .fa-github,
+.contact-social a .fa-github,
+.hero-social a .fa-github {
+    color: var(--text-primary);
+}
+
+.social-sidebar a .fa-envelope,
+.footer-social a .fa-envelope,
+.contact-social a .fa-envelope,
+.hero-social a .fa-envelope {
+    color: #EA4335;
 }
 
 .social-sidebar a:hover {
     border-color: var(--primary);
-    color: var(--primary-light);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-sidebar a:hover .fa-linkedin-in {
+    color: #0077B5;
+}
+
+.social-sidebar a:hover .fa-github {
+    color: var(--primary-light);
+}
+
+.social-sidebar a:hover .fa-envelope {
+    color: #D93025;
 }
 
 .social-line {
@@ -1492,13 +1640,25 @@ a.certificate-card {
     background: var(--bg-tertiary);
     border: 1px solid var(--border);
     border-radius: 50%;
-    color: var(--text-secondary);
     transition: var(--transition);
 }
 
 .footer-social a:hover {
     border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.footer-social a:hover .fa-linkedin-in {
+    color: #0077B5;
+}
+
+.footer-social a:hover .fa-github {
     color: var(--primary-light);
+}
+
+.footer-social a:hover .fa-envelope {
+    color: #D93025;
 }
 
 .footer-bottom {

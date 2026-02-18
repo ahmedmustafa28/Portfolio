@@ -6,6 +6,47 @@ const backToTopBtn = document.getElementById('backToTop');
 const dynamicText = document.getElementById('dynamic-text');
 const contactForm = document.getElementById('contact-form');
 const toastContainer = document.getElementById('toast-container');
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+// ===== Theme Toggle =====
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    
+    // Update icon
+    if (theme === 'light') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+}
+
+// Check for saved theme or system preference
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else if (systemPrefersDark) {
+        setTheme('dark');
+    } else {
+        setTheme('dark'); // Default to dark
+    }
+}
+
+// Initialize theme on load
+initTheme();
+
+// Toggle theme on button click
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+});
 
 // ===== Typing Animation (Limited roles) =====
 const roles = [
