@@ -198,6 +198,52 @@ strong {
 .nav-links a {
     color: var(--text-secondary);
     font-weight: 500;
+}
+
+/* ===== Nav CV Button ===== */
+.nav-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.nav-cv-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6);
+}
+
+.nav-cv-btn i {
+    font-size: 0.9rem;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(99, 102, 241, 0.7);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-cv-btn {
+        display: none;
+    }
+    
+    .nav-cv-btn.mobile {
+        display: inline-flex;
+        margin-top: 20px;
+    }
     font-size: 0.9rem;
     position: relative;
     padding: 4px 0;
