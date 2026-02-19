@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=4.0">
+    <link rel="stylesheet" href="css/style.css?v=5.3">
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
@@ -189,61 +189,56 @@
         <section class="education" id="education" aria-labelledby="education-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">My Journey</span>
+                    <span class="section-label">// education.sql</span>
                     <h2 class="section-title" id="education-heading">Education</h2>
+                    <p class="section-description">My academic journey and foundational learning path.</p>
                 </header>
-                <div class="education-grid">
-                    <article class="education-card featured">
-                        <div class="edu-icon">
-                            <i class="fas fa-university" aria-hidden="true"></i>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
-                        <div class="edu-content">
-                            <span class="edu-date">Aug 2023 – May 2027</span>
-                            <h3>Bachelor of Engineering in Software Engineering</h3>
-                            <h4>Mehran University of Engineering and Technology</h4>
-                            <p class="edu-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Hyderabad, Sindh</p>
-                            <div class="edu-details">
-                                <h5>Key Coursework:</h5>
-                                <ul>
-                                    <li>Data Structures & Algorithms</li>
-                                    <li>Object-Oriented Programming (C++)</li>
-                                    <li>Database Management Systems</li>
-                                    <li>Software Design & Architecture</li>
-                                    <li>Computer Networks</li>
-                                </ul>
-                            </div>
-                            <div class="edu-tags">
-                                <span>C++</span>
-                                <span>DSA</span>
-                                <span>OOP</span>
-                                <span>DBMS</span>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="education-card">
-                        <div class="edu-icon secondary">
-                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                        </div>
-                        <div class="edu-content">
-                            <span class="edu-date">2023 – 2025</span>
-                            <h3>Intermediate in Pre-Engineering</h3>
-                            <h4>Government Ustad Bukhari Degree College Dadu</h4>
-                            <p class="edu-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dadu, Sindh</p>
-                            <p class="edu-note">Completed pre-engineering coursework with focus on mathematics, physics, and chemistry, building a strong foundation for engineering studies.</p>
-                        </div>
-                    </article>
-                    <article class="education-card">
-                        <div class="edu-icon secondary">
-                            <i class="fas fa-school" aria-hidden="true"></i>
-                        </div>
-                        <div class="edu-content">
-                            <span class="edu-date">2021 – 2023</span>
-                            <h3>Matriculation in General Science</h3>
-                            <h4>IBA Community College Dadu</h4>
-                            <p class="edu-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dadu, Sindh</p>
-                            <p class="edu-note">Foundation in mathematics and sciences that sparked my interest in technology and problem-solving.</p>
-                        </div>
-                    </article>
+                        <span class="terminal-title">education.sql</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="sql-comment">-- Academic Records Database</span>
+<span class="line-number">2</span>  
+<span class="line-number">3</span>  <span class="sql-keyword">INSERT INTO</span> <span class="sql-table">education</span> <span class="sql-keyword">VALUES</span> <span class="bracket">(</span>
+<span class="line-number">4</span>      <span class="sql-field">degree</span>      <span class="operator">=></span> <span class="string">'B.E. Software Engineering'</span><span class="comma">,</span>
+<span class="line-number">5</span>      <span class="sql-field">institution</span> <span class="operator">=></span> <span class="string">'Mehran University (MUET)'</span><span class="comma">,</span>
+<span class="line-number">6</span>      <span class="sql-field">location</span>    <span class="operator">=></span> <span class="string">'Hyderabad, Sindh'</span><span class="comma">,</span>
+<span class="line-number">7</span>      <span class="sql-field">duration</span>    <span class="operator">=></span> <span class="string">'2023 - 2027'</span><span class="comma">,</span>
+<span class="line-number">8</span>      <span class="sql-field">status</span>      <span class="operator">=></span> <span class="sql-active">'IN_PROGRESS'</span><span class="comma">,</span>
+<span class="line-number">9</span>      <span class="sql-field">coursework</span>  <span class="operator">=></span> <span class="sql-array">ARRAY</span><span class="bracket">[</span>
+<span class="line-number">10</span>         <span class="string">'Data Structures & Algorithms'</span><span class="comma">,</span>
+<span class="line-number">11</span>         <span class="string">'Object-Oriented Programming'</span><span class="comma">,</span>
+<span class="line-number">12</span>         <span class="string">'Database Management Systems'</span><span class="comma">,</span>
+<span class="line-number">13</span>         <span class="string">'Software Design & Architecture'</span><span class="comma">,</span>
+<span class="line-number">14</span>         <span class="string">'Computer Networks'</span>
+<span class="line-number">15</span>     <span class="bracket">]</span>
+<span class="line-number">16</span> <span class="bracket">)</span><span class="sql-keyword">;</span>
+<span class="line-number">17</span> 
+<span class="line-number">18</span> <span class="sql-keyword">INSERT INTO</span> <span class="sql-table">education</span> <span class="sql-keyword">VALUES</span> <span class="bracket">(</span>
+<span class="line-number">19</span>     <span class="sql-field">degree</span>      <span class="operator">=></span> <span class="string">'Intermediate Pre-Engineering'</span><span class="comma">,</span>
+<span class="line-number">20</span>     <span class="sql-field">institution</span> <span class="operator">=></span> <span class="string">'Govt. Ustad Bukhari College'</span><span class="comma">,</span>
+<span class="line-number">21</span>     <span class="sql-field">location</span>    <span class="operator">=></span> <span class="string">'Dadu, Sindh'</span><span class="comma">,</span>
+<span class="line-number">22</span>     <span class="sql-field">duration</span>    <span class="operator">=></span> <span class="string">'2021 - 2023'</span><span class="comma">,</span>
+<span class="line-number">23</span>     <span class="sql-field">status</span>      <span class="operator">=></span> <span class="sql-complete">'COMPLETED'</span>
+<span class="line-number">24</span> <span class="bracket">)</span><span class="sql-keyword">;</span>
+<span class="line-number">25</span> 
+<span class="line-number">26</span> <span class="sql-keyword">INSERT INTO</span> <span class="sql-table">education</span> <span class="sql-keyword">VALUES</span> <span class="bracket">(</span>
+<span class="line-number">27</span>     <span class="sql-field">degree</span>      <span class="operator">=></span> <span class="string">'Matriculation General Science'</span><span class="comma">,</span>
+<span class="line-number">28</span>     <span class="sql-field">institution</span> <span class="operator">=></span> <span class="string">'IBA Community College'</span><span class="comma">,</span>
+<span class="line-number">29</span>     <span class="sql-field">location</span>    <span class="operator">=></span> <span class="string">'Dadu, Sindh'</span><span class="comma">,</span>
+<span class="line-number">30</span>     <span class="sql-field">duration</span>    <span class="operator">=></span> <span class="string">'2019 - 2021'</span><span class="comma">,</span>
+<span class="line-number">31</span>     <span class="sql-field">status</span>      <span class="operator">=></span> <span class="sql-complete">'COMPLETED'</span>
+<span class="line-number">32</span> <span class="bracket">)</span><span class="sql-keyword">;</span>
+<span class="line-number">33</span> 
+<span class="line-number">34</span> <span class="sql-comment">-- Query: SELECT * FROM education ORDER BY year DESC;</span></code></pre>
+                        <div class="terminal-cursor"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -302,160 +297,82 @@
         <section class="projects" id="projects" aria-labelledby="projects-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">What I've Built</span>
+                    <span class="section-label">// projects.json</span>
                     <h2 class="section-title" id="projects-heading">Featured Projects</h2>
-                    <p class="section-description">A selection of projects that showcase my problem-solving approach and technical skills.</p>
+                    <p class="section-description">Real-world applications showcasing my problem-solving approach and technical expertise in Machine Learning & Data Science.</p>
                 </header>
-                <div class="projects-grid">
-                    <!-- Featured Project 1 - File Encryption -->
-                    <article class="project-card featured">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop" alt="Secure File Encryption System" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/ahmedmustafa28/infosec-file-encryption-project" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
+                <div class="terminal-window projects-terminal-full">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
-                        <div class="project-content">
-                            <span class="project-type">Featured Project</span>
-                            <h3>Secure File Encryption System</h3>
-                            <div class="project-description">
-                                <p><strong>Problem:</strong> Need for secure file encryption with integrity verification for sensitive data protection.</p>
-                                <p><strong>Solution:</strong> Built a Python-based GUI application providing secure file encryption, decryption, and integrity verification using modern cryptographic techniques.</p>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Cryptography</span>
-                                <span>GUI</span>
-                                <span>Security</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Featured Project 2 - Olympics Data Analysis -->
-                    <article class="project-card featured">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Olympics Data Analysis" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/ahmedmustafa28/Olympics-Data-Analysis" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-type">Featured Project</span>
-                            <h3>Olympics Data Analysis</h3>
-                            <div class="project-description">
-                                <p><strong>Problem:</strong> Difficulty in exploring and understanding historical Olympic data trends.</p>
-                                <p><strong>Solution:</strong> Created a Streamlit-based web app for interactive analysis — explore medal tallies, country and athlete performance trends with dynamic visualizations.</p>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Streamlit</span>
-                                <span>Data Analysis</span>
-                                <span>Visualization</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 3 - WhatsApp Chat Analyzer -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&h=400&fit=crop" alt="WhatsApp Chat Analyzer" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/ahmedmustafa28/WhatsApp-Chat-Analyzer" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>WhatsApp Chat Analyzer</h3>
-                            <div class="project-description">
-                                <p>A Python tool that analyzes WhatsApp chat data and provides insights including message statistics, activity patterns, and word frequency analysis.</p>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>NLP</span>
-                                <span>Data Analysis</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 4 - 100 Days of ML -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop" alt="100 Days of Machine Learning" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/ahmedmustafa28/100-days-of-Machine-Learning" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>100 Days of Machine Learning</h3>
-                            <div class="project-description">
-                                <p>A comprehensive 100-day hands-on journey into Machine Learning, from fundamentals to real projects — documenting learning and implementations.</p>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Machine Learning</span>
-                                <span>AI</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 5 - Placement Prediction -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Placement Prediction ML" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/ahmedmustafa28/placement-prediction-ml" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Placement Prediction ML</h3>
-                            <div class="project-description">
-                                <p>A machine learning model that predicts student placement outcomes based on academic and other relevant features using classification algorithms.</p>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Jupyter</span>
-                                <span>ML</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 6 - Student Management System -->
-                    <article class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop" alt="Student Management System" class="project-img">
-                            <div class="project-overlay">
-                                <a href="https://github.com/ahmedmustafa28/Student-Management-System" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Student Management System</h3>
-                            <div class="project-description">
-                                <p>A Python-based system to handle student data entry, updates, and analysis with an intuitive interface for academic record management.</p>
-                            </div>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Database</span>
-                                <span>CRUD</span>
-                            </div>
-                        </div>
-                    </article>
+                        <span class="terminal-title">projects.json</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="bracket">{</span>
+<span class="line-number">2</span>    <span class="key">"projects"</span><span class="colon">:</span> <span class="bracket">[</span>
+<span class="line-number">3</span>      <span class="bracket">{</span>
+<span class="line-number">4</span>        <span class="key">"name"</span><span class="colon">:</span> <span class="string">"100 Days of Machine Learning"</span><span class="comma">,</span>
+<span class="line-number">5</span>        <span class="key">"type"</span><span class="colon">:</span> <span class="string">"Featured"</span><span class="comma">,</span>
+<span class="line-number">6</span>        <span class="key">"description"</span><span class="colon">:</span> <span class="string">"Comprehensive ML journey from fundamentals to advanced"</span><span class="comma">,</span>
+<span class="line-number">7</span>        <span class="key">"metrics"</span><span class="colon">:</span> <span class="bracket">{</span> <span class="key">"days"</span><span class="colon">:</span> <span class="string">"100+"</span><span class="comma">,</span> <span class="key">"notebooks"</span><span class="colon">:</span> <span class="string">"50+"</span> <span class="bracket">}</span><span class="comma">,</span>
+<span class="line-number">8</span>        <span class="key">"tech"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"Scikit-learn"</span><span class="comma">,</span> <span class="string">"TensorFlow"</span><span class="comma">,</span> <span class="string">"Pandas"</span><span class="bracket">]</span>
+<span class="line-number">9</span>      <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="https://github.com/ahmedmustafa28/100-days-of-Machine-Learning" target="_blank" rel="noopener noreferrer" class="terminal-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">10</span>     <span class="bracket">{</span>
+<span class="line-number">11</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"Student Management System"</span><span class="comma">,</span>
+<span class="line-number">12</span>       <span class="key">"type"</span><span class="colon">:</span> <span class="string">"Featured"</span><span class="comma">,</span>
+<span class="line-number">13</span>       <span class="key">"description"</span><span class="colon">:</span> <span class="string">"Complete CRUD app for managing student records"</span><span class="comma">,</span>
+<span class="line-number">14</span>       <span class="key">"metrics"</span><span class="colon">:</span> <span class="bracket">{</span> <span class="key">"features"</span><span class="colon">:</span> <span class="string">"Full CRUD"</span><span class="comma">,</span> <span class="key">"users"</span><span class="colon">:</span> <span class="string">"Multi-user"</span> <span class="bracket">}</span><span class="comma">,</span>
+<span class="line-number">15</span>       <span class="key">"tech"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"SQLite"</span><span class="comma">,</span> <span class="string">"Tkinter"</span><span class="bracket">]</span>
+<span class="line-number">16</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="https://github.com/ahmedmustafa28/Student-Management-System" target="_blank" rel="noopener noreferrer" class="terminal-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">17</span>     <span class="bracket">{</span>
+<span class="line-number">18</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"Olympics Data Analysis"</span><span class="comma">,</span>
+<span class="line-number">19</span>       <span class="key">"description"</span><span class="colon">:</span> <span class="string">"Interactive Streamlit app for Olympic data exploration"</span><span class="comma">,</span>
+<span class="line-number">20</span>       <span class="key">"metrics"</span><span class="colon">:</span> <span class="bracket">{</span> <span class="key">"charts"</span><span class="colon">:</span> <span class="string">"10+"</span> <span class="bracket">}</span><span class="comma">,</span>
+<span class="line-number">21</span>       <span class="key">"tech"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"Streamlit"</span><span class="comma">,</span> <span class="string">"Plotly"</span><span class="comma">,</span> <span class="string">"Pandas"</span><span class="bracket">]</span>
+<span class="line-number">22</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="https://github.com/ahmedmustafa28/Olympics-Data-Analysis" target="_blank" rel="noopener noreferrer" class="terminal-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">23</span>     <span class="bracket">{</span>
+<span class="line-number">24</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"WhatsApp Chat Analyzer"</span><span class="comma">,</span>
+<span class="line-number">25</span>       <span class="key">"description"</span><span class="colon">:</span> <span class="string">"NLP-powered text analysis for WhatsApp exports"</span><span class="comma">,</span>
+<span class="line-number">26</span>       <span class="key">"metrics"</span><span class="colon">:</span> <span class="bracket">{</span> <span class="key">"feature"</span><span class="colon">:</span> <span class="string">"NLP Insights"</span> <span class="bracket">}</span><span class="comma">,</span>
+<span class="line-number">27</span>       <span class="key">"tech"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"NLTK"</span><span class="comma">,</span> <span class="string">"Matplotlib"</span><span class="bracket">]</span>
+<span class="line-number">28</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="https://github.com/ahmedmustafa28/WhatsApp-Chat-Analyzer" target="_blank" rel="noopener noreferrer" class="terminal-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">29</span>     <span class="bracket">{</span>
+<span class="line-number">30</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"Python Fundamentals"</span><span class="comma">,</span>
+<span class="line-number">31</span>       <span class="key">"description"</span><span class="colon">:</span> <span class="string">"Comprehensive Python basics, OOP, and DSA"</span><span class="comma">,</span>
+<span class="line-number">32</span>       <span class="key">"metrics"</span><span class="colon">:</span> <span class="bracket">{</span> <span class="key">"topics"</span><span class="colon">:</span> <span class="string">"30+"</span> <span class="bracket">}</span><span class="comma">,</span>
+<span class="line-number">33</span>       <span class="key">"tech"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"OOP"</span><span class="comma">,</span> <span class="string">"DSA"</span><span class="bracket">]</span>
+<span class="line-number">34</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="https://github.com/ahmedmustafa28/Python-Basics" target="_blank" rel="noopener noreferrer" class="terminal-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">35</span>     <span class="bracket">{</span>
+<span class="line-number">36</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"Secure File Encryption"</span><span class="comma">,</span>
+<span class="line-number">37</span>       <span class="key">"description"</span><span class="colon">:</span> <span class="string">"GUI app for file encryption using AES-256"</span><span class="comma">,</span>
+<span class="line-number">38</span>       <span class="key">"metrics"</span><span class="colon">:</span> <span class="bracket">{</span> <span class="key">"encryption"</span><span class="colon">:</span> <span class="string">"AES-256"</span> <span class="bracket">}</span><span class="comma">,</span>
+<span class="line-number">39</span>       <span class="key">"tech"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"Cryptography"</span><span class="comma">,</span> <span class="string">"Tkinter"</span><span class="bracket">]</span>
+<span class="line-number">40</span>     <span class="bracket">}</span></code></pre>
+                        <a href="https://github.com/ahmedmustafa28/infosec-file-encryption-project" target="_blank" rel="noopener noreferrer" class="terminal-btn">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">41</span>   <span class="bracket">]</span>
+<span class="line-number">42</span> <span class="bracket">}</span></code></pre>
+                        <div class="terminal-cursor"></div>
+                    </div>
                 </div>
                 <div class="projects-cta">
                     <a href="https://github.com/ahmedmustafa28" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
@@ -470,99 +387,148 @@
         <section class="skills" id="skills" aria-labelledby="skills-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">My Toolkit</span>
+                    <span class="section-label">// skills.py</span>
                     <h2 class="section-title" id="skills-heading">Skills & Technologies</h2>
+                    <p class="section-description">My technical toolkit for building data-driven solutions and intelligent systems.</p>
                 </header>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <i class="fas fa-code" aria-hidden="true"></i>
-                            <h3>Programming</h3>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <span class="skill-name">C++</span>
-                                <span class="skill-level proficient">Proficient</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level learning">Learning</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level learning">Learning</span>
-                            </div>
-                        </div>
+                        <span class="terminal-title">skills.py</span>
                     </div>
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                            <h3>Web Development</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <span class="skill-name">HTML5</span>
-                                <span class="skill-level comfortable">Comfortable</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">CSS3</span>
-                                <span class="skill-level comfortable">Comfortable</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">React</span>
-                                <span class="skill-level learning">Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <i class="fas fa-tools" aria-hidden="true"></i>
-                            <h3>Tools & Platforms</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <span class="skill-name">Git & GitHub</span>
-                                <span class="skill-level comfortable">Comfortable</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">VS Code</span>
-                                <span class="skill-level proficient">Proficient</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Linux/Terminal</span>
-                                <span class="skill-level comfortable">Comfortable</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <div class="category-header">
-                            <i class="fas fa-palette" aria-hidden="true"></i>
-                            <h3>Design</h3>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <span class="skill-name">Figma</span>
-                                <span class="skill-level proficient">Proficient</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Canva</span>
-                                <span class="skill-level proficient">Proficient</span>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Adobe Photoshop</span>
-                                <span class="skill-level comfortable">Comfortable</span>
-                            </div>
-                        </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="comment"># Ahmed's Technical Skillset</span>
+<span class="line-number">2</span>  
+<span class="line-number">3</span>  <span class="variable">programming_languages</span> <span class="operator">=</span> <span class="bracket">{</span>
+<span class="line-number">4</span>      <span class="string">"primary"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"SQL"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">5</span>      <span class="string">"secondary"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"C++"</span><span class="comma">,</span> <span class="string">"JavaScript"</span><span class="bracket">]</span>
+<span class="line-number">6</span>  <span class="bracket">}</span>
+<span class="line-number">7</span>  
+<span class="line-number">8</span>  <span class="variable">machine_learning</span> <span class="operator">=</span> <span class="bracket">{</span>
+<span class="line-number">9</span>      <span class="string">"proficient"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"NumPy"</span><span class="comma">,</span> <span class="string">"Pandas"</span><span class="comma">,</span> <span class="string">"Scikit-learn"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">10</span>     <span class="string">"learning"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"TensorFlow"</span><span class="bracket">]</span>
+<span class="line-number">11</span> <span class="bracket">}</span>
+<span class="line-number">12</span> 
+<span class="line-number">13</span> <span class="variable">visualization</span> <span class="operator">=</span> <span class="bracket">[</span><span class="string">"Matplotlib"</span><span class="comma">,</span> <span class="string">"Seaborn"</span><span class="comma">,</span> <span class="string">"Plotly"</span><span class="bracket">]</span>
+<span class="line-number">14</span> 
+<span class="line-number">15</span> <span class="variable">tools_platforms</span> <span class="operator">=</span> <span class="bracket">[</span>
+<span class="line-number">16</span>     <span class="string">"Jupyter Notebook"</span><span class="comma">,</span>
+<span class="line-number">17</span>     <span class="string">"VS Code"</span><span class="comma">,</span>
+<span class="line-number">18</span>     <span class="string">"Git & GitHub"</span><span class="comma">,</span>
+<span class="line-number">19</span>     <span class="string">"Streamlit"</span>
+<span class="line-number">20</span> <span class="bracket">]</span>
+<span class="line-number">21</span> 
+<span class="line-number">22</span> <span class="variable">data_analytics</span> <span class="operator">=</span> <span class="bracket">{</span>
+<span class="line-number">23</span>     <span class="string">"expertise"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Data Analysis"</span><span class="comma">,</span> <span class="string">"NLP"</span><span class="comma">,</span> <span class="string">"Predictive Modeling"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">24</span>     <span class="string">"familiar"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"EDA"</span><span class="bracket">]</span>
+<span class="line-number">25</span> <span class="bracket">}</span></code></pre>
+                        <div class="terminal-cursor"></div>
                     </div>
                 </div>
-                <div class="soft-skills">
-                    <h3>Also Strong In</h3>
-                    <div class="soft-skills-list">
-                        <span>Team Leadership</span>
-                        <span>Visual Communication</span>
-                        <span>Problem Solving</span>
-                        <span>Project Management</span>
-                        <span>Collaboration</span>
+            </div>
+        </section>
+
+        <!-- Core Concepts Section -->
+        <section class="core-concepts" id="concepts" aria-labelledby="concepts-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">// knowledge.base()</span>
+                    <h2 class="section-title" id="concepts-heading">Core Concepts</h2>
+                    <p class="section-description">Fundamental software engineering and data science concepts I've mastered and applied.</p>
+                </header>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">knowledge.yaml</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="comment"># Core Knowledge Base</span>
+<span class="line-number">2</span>  
+<span class="line-number">3</span>  <span class="yaml-key">programming:</span>
+<span class="line-number">4</span>      <span class="yaml-item">- Python Fundamentals</span>
+<span class="line-number">5</span>      <span class="yaml-item">- Data Structures & Algorithms</span>
+<span class="line-number">6</span>  
+<span class="line-number">7</span>  <span class="yaml-key">data_engineering:</span>
+<span class="line-number">8</span>      <span class="yaml-item">- Data Cleaning & Preprocessing</span>
+<span class="line-number">9</span>      <span class="yaml-item">- Exploratory Data Analysis</span>
+<span class="line-number">10</span>     <span class="yaml-item">- Data Visualization Principles</span>
+<span class="line-number">11</span> 
+<span class="line-number">12</span> <span class="yaml-key">machine_learning:</span>
+<span class="line-number">13</span>     <span class="yaml-item">- Supervised Machine Learning</span>
+<span class="line-number">14</span>     <span class="yaml-item">- Model Evaluation & Metrics</span>
+<span class="line-number">15</span>     <span class="yaml-item">- Natural Language Processing</span>
+<span class="line-number">16</span>     <span class="yaml-item">- Predictive Modeling Workflows</span>
+<span class="line-number">17</span> 
+<span class="line-number">18</span> <span class="yaml-key">systems:</span>
+<span class="line-number">19</span>     <span class="yaml-item">- Operating Systems</span>
+<span class="line-number">20</span>     <span class="yaml-item">- Computer Networking</span>
+<span class="line-number">21</span>     <span class="yaml-item">- Data Warehousing</span>
+<span class="line-number">22</span>     <span class="yaml-item">- Database Systems</span></code></pre>
+                        <div class="terminal-cursor"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Tools Section -->
+        <section class="dev-tools" id="tools" aria-labelledby="tools-heading">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-label">// .devconfig</span>
+                    <h2 class="section-title" id="tools-heading">Development Tools</h2>
+                    <p class="section-description">The tools and technologies I use daily for building and deploying solutions.</p>
+                </header>
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">.devconfig</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="bash-comment"># Ahmed's Development Environment</span>
+<span class="line-number">2</span>  <span class="bash-comment"># $ source ~/.devconfig</span>
+<span class="line-number">3</span>  
+<span class="line-number">4</span>  <span class="bash-export">export</span> <span class="bash-var">IDE</span><span class="operator">=</span><span class="bracket">(</span>
+<span class="line-number">5</span>      <span class="string">"VS Code"</span>         <span class="bash-comment"># Primary editor - extensions loaded</span>
+<span class="line-number">6</span>      <span class="string">"PyCharm"</span>         <span class="bash-comment"># Python debugging & refactoring</span>
+<span class="line-number">7</span>      <span class="string">"IntelliJ IDEA"</span>   <span class="bash-comment"># Enterprise Java development</span>
+<span class="line-number">8</span>  <span class="bracket">)</span>
+<span class="line-number">9</span>  
+<span class="line-number">10</span> <span class="bash-export">export</span> <span class="bash-var">NOTEBOOKS</span><span class="operator">=</span><span class="bracket">(</span>
+<span class="line-number">11</span>     <span class="string">"Jupyter"</span>         <span class="bash-comment"># Interactive data exploration</span>
+<span class="line-number">12</span>     <span class="string">"Google Colab"</span>    <span class="bash-comment"># Cloud GPU for ML training</span>
+<span class="line-number">13</span> <span class="bracket">)</span>
+<span class="line-number">14</span> 
+<span class="line-number">15</span> <span class="bash-export">export</span> <span class="bash-var">VISUALIZATION</span><span class="operator">=</span><span class="bracket">(</span>
+<span class="line-number">16</span>     <span class="string">"Matplotlib"</span>      <span class="bash-comment"># Static plots & charts</span>
+<span class="line-number">17</span>     <span class="string">"Seaborn"</span>         <span class="bash-comment"># Statistical visualizations</span>
+<span class="line-number">18</span>     <span class="string">"Plotly"</span>          <span class="bash-comment"># Interactive dashboards</span>
+<span class="line-number">19</span> <span class="bracket">)</span>
+<span class="line-number">20</span> 
+<span class="line-number">21</span> <span class="bash-export">export</span> <span class="bash-var">DEPLOYMENT</span><span class="operator">=</span><span class="bracket">(</span>
+<span class="line-number">22</span>     <span class="string">"Streamlit"</span>       <span class="bash-comment"># Rapid web app prototyping</span>
+<span class="line-number">23</span> <span class="bracket">)</span>
+<span class="line-number">24</span> 
+<span class="line-number">25</span> <span class="bash-export">export</span> <span class="bash-var">VERSION_CONTROL</span><span class="operator">=</span><span class="bracket">(</span>
+<span class="line-number">26</span>     <span class="string">"Git"</span>             <span class="bash-comment"># Branching & version tracking</span>
+<span class="line-number">27</span>     <span class="string">"GitHub"</span>          <span class="bash-comment"># Collaboration & CI/CD</span>
+<span class="line-number">28</span> <span class="bracket">)</span>
+<span class="line-number">29</span> 
+<span class="line-number">30</span> <span class="bash-export">export</span> <span class="bash-var">TERMINAL</span><span class="operator">=</span><span class="string">"zsh"</span>  <span class="bash-comment"># Daily driver with oh-my-zsh</span>
+<span class="line-number">31</span> 
+<span class="line-number">32</span> <span class="bash-comment"># Environment ready. Happy coding! 🚀</span></code></pre>
+                        <div class="terminal-cursor"></div>
                     </div>
                 </div>
             </div>
@@ -572,85 +538,76 @@
         <section class="certificates" id="certificates" aria-labelledby="certificates-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">My Achievements</span>
-                    <h2 class="section-title" id="certificates-heading">Certificates</h2>
-                    <p class="section-description">Professional certifications and courses I've completed to enhance my skills.</p>
+                    <span class="section-label">// credentials.json</span>
+                    <h2 class="section-title" id="certificates-heading">Certifications</h2>
+                    <p class="section-description">Professional certifications validating my expertise in programming and data science.</p>
                 </header>
-                <div class="certificates-grid">
-                    <!-- Certificate 1 - Python -->
-                    <a href="Certificates/Python.png" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                        <div class="certificate-image">
-                            <img src="Certificates/Python.png" alt="Python Programming Certificate" class="cert-img">
+                <div class="terminal-window certs-terminal-full">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
-                        <div class="certificate-content">
-                            <h3>Python Programming</h3>
-                            <p class="cert-issuer"><i class="fas fa-award"></i> Professional Certification</p>
-                            <div class="cert-tags">
-                                <span>Python</span>
-                                <span>Programming</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Certificate 2 - NumPy -->
-                    <a href="Certificates/NumPy.png" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                        <div class="certificate-image">
-                            <img src="Certificates/NumPy.png" alt="NumPy for Data Science Certificate" class="cert-img">
-                        </div>
-                        <div class="certificate-content">
-                            <h3>NumPy for Data Science</h3>
-                            <p class="cert-issuer"><i class="fas fa-award"></i> Professional Certification</p>
-                            <div class="cert-tags">
-                                <span>NumPy</span>
-                                <span>Data Science</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Certificate 3 - Java Development -->
-                    <a href="Certificates/Java Development.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                        <div class="certificate-image">
-                            <img src="Certificates/Java Development.jpg" alt="Java Development Certificate" class="cert-img">
-                        </div>
-                        <div class="certificate-content">
-                            <h3>Java Development</h3>
-                            <p class="cert-issuer"><i class="fas fa-award"></i> Professional Certification</p>
-                            <div class="cert-tags">
-                                <span>Java</span>
-                                <span>Development</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Certificate 4 - NFTP -->
-                    <a href="Certificates/NFTP.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                        <div class="certificate-image">
-                            <img src="Certificates/NFTP.jpg" alt="NFTP Certificate" class="cert-img">
-                        </div>
-                        <div class="certificate-content">
-                            <h3>NFTP Program</h3>
-                            <p class="cert-issuer"><i class="fas fa-award"></i> National Freelance Training Program</p>
-                            <div class="cert-tags">
-                                <span>Freelancing</span>
-                                <span>Training</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Certificate 5 - Prompting -->
-                    <a href="Certificates/Prompting.jpeg" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                        <div class="certificate-image">
-                            <img src="Certificates/Prompting.jpeg" alt="AI Prompting Certificate" class="cert-img">
-                        </div>
-                        <div class="certificate-content">
-                            <h3>AI Prompt Engineering</h3>
-                            <p class="cert-issuer"><i class="fas fa-award"></i> Professional Certification</p>
-                            <div class="cert-tags">
-                                <span>AI</span>
-                                <span>Prompting</span>
-                            </div>
-                        </div>
-                    </a>
+                        <span class="terminal-title">credentials.json</span>
+                    </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="bracket">{</span>
+<span class="line-number">2</span>    <span class="key">"certificates"</span><span class="colon">:</span> <span class="bracket">[</span>
+<span class="line-number">3</span>      <span class="bracket">{</span>
+<span class="line-number">4</span>        <span class="key">"name"</span><span class="colon">:</span> <span class="string">"Python Programming"</span><span class="comma">,</span>
+<span class="line-number">5</span>        <span class="key">"issuer"</span><span class="colon">:</span> <span class="string">"Coursera / University"</span><span class="comma">,</span>
+<span class="line-number">6</span>        <span class="key">"year"</span><span class="colon">:</span> <span class="string">"2024"</span><span class="comma">,</span>
+<span class="line-number">7</span>        <span class="key">"skills"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"Programming"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">8</span>        <span class="key">"verified"</span><span class="colon">:</span> <span class="keyword">true</span>
+<span class="line-number">9</span>      <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="Certificates/Python.png" target="_blank" rel="noopener noreferrer" class="terminal-btn verify">
+                            <i class="fas fa-certificate"></i> Verify Certificate
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">10</span>     <span class="bracket">{</span>
+<span class="line-number">11</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"NumPy for Data Science"</span><span class="comma">,</span>
+<span class="line-number">12</span>       <span class="key">"issuer"</span><span class="colon">:</span> <span class="string">"Great Learning"</span><span class="comma">,</span>
+<span class="line-number">13</span>       <span class="key">"year"</span><span class="colon">:</span> <span class="string">"2024"</span><span class="comma">,</span>
+<span class="line-number">14</span>       <span class="key">"skills"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"NumPy"</span><span class="comma">,</span> <span class="string">"Data Science"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">15</span>       <span class="key">"verified"</span><span class="colon">:</span> <span class="keyword">true</span>
+<span class="line-number">16</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="Certificates/NumPy.png" target="_blank" rel="noopener noreferrer" class="terminal-btn verify">
+                            <i class="fas fa-certificate"></i> Verify Certificate
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">17</span>     <span class="bracket">{</span>
+<span class="line-number">18</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"Java Development"</span><span class="comma">,</span>
+<span class="line-number">19</span>       <span class="key">"issuer"</span><span class="colon">:</span> <span class="string">"Oracle / Udemy"</span><span class="comma">,</span>
+<span class="line-number">20</span>       <span class="key">"year"</span><span class="colon">:</span> <span class="string">"2023"</span><span class="comma">,</span>
+<span class="line-number">21</span>       <span class="key">"skills"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Java"</span><span class="comma">,</span> <span class="string">"OOP"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">22</span>       <span class="key">"verified"</span><span class="colon">:</span> <span class="keyword">true</span>
+<span class="line-number">23</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="Certificates/Java Development.jpg" target="_blank" rel="noopener noreferrer" class="terminal-btn verify">
+                            <i class="fas fa-certificate"></i> Verify Certificate
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">24</span>     <span class="bracket">{</span>
+<span class="line-number">25</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"NFTP Program"</span><span class="comma">,</span>
+<span class="line-number">26</span>       <span class="key">"issuer"</span><span class="colon">:</span> <span class="string">"Ministry of IT, Pakistan"</span><span class="comma">,</span>
+<span class="line-number">27</span>       <span class="key">"year"</span><span class="colon">:</span> <span class="string">"2023"</span><span class="comma">,</span>
+<span class="line-number">28</span>       <span class="key">"skills"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Freelancing"</span><span class="comma">,</span> <span class="string">"Training"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">29</span>       <span class="key">"verified"</span><span class="colon">:</span> <span class="keyword">true</span>
+<span class="line-number">30</span>     <span class="bracket">}</span><span class="comma">,</span></code></pre>
+                        <a href="Certificates/NFTP.jpg" target="_blank" rel="noopener noreferrer" class="terminal-btn verify">
+                            <i class="fas fa-certificate"></i> Verify Certificate
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">31</span>     <span class="bracket">{</span>
+<span class="line-number">32</span>       <span class="key">"name"</span><span class="colon">:</span> <span class="string">"AI Prompt Engineering"</span><span class="comma">,</span>
+<span class="line-number">33</span>       <span class="key">"issuer"</span><span class="colon">:</span> <span class="string">"DeepLearning.AI"</span><span class="comma">,</span>
+<span class="line-number">34</span>       <span class="key">"year"</span><span class="colon">:</span> <span class="string">"2024"</span><span class="comma">,</span>
+<span class="line-number">35</span>       <span class="key">"skills"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"AI"</span><span class="comma">,</span> <span class="string">"Prompting"</span><span class="bracket">]</span><span class="comma">,</span>
+<span class="line-number">36</span>       <span class="key">"verified"</span><span class="colon">:</span> <span class="keyword">true</span>
+<span class="line-number">37</span>     <span class="bracket">}</span></code></pre>
+                        <a href="Certificates/Prompting.jpeg" target="_blank" rel="noopener noreferrer" class="terminal-btn verify">
+                            <i class="fas fa-certificate"></i> Verify Certificate
+                        </a>
+                        <pre class="code-block"><code><span class="line-number">38</span>   <span class="bracket">]</span>
+<span class="line-number">39</span> <span class="bracket">}</span></code></pre>
+                        <div class="terminal-cursor"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -659,88 +616,74 @@
         <section class="contact" id="contact" aria-labelledby="contact-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">Let's Connect</span>
+                    <span class="section-label">// contact.py</span>
                     <h2 class="section-title" id="contact-heading">Get In Touch</h2>
                     <p class="section-description">
                         I'm passionate about leveraging technology to solve real-world problems and actively seeking 
                         internship opportunities to apply and expand my skills. Let's discuss how I can contribute to your team.
                     </p>
                 </header>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <h3>Reach Out Directly</h3>
-                            <div class="contact-methods">
-                                <a href="mailto:bhurgrimustafa203@gmail.com" class="contact-method">
-                                    <div class="method-icon">
-                                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="method-details">
-                                        <span class="method-label">Email</span>
-                                        <span class="method-value">bhurgrimustafa203@gmail.com</span>
-                                    </div>
-                                    <i class="fas fa-arrow-right method-arrow" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/ahmed-mustafa-baa587290/" target="_blank" rel="noopener noreferrer" class="contact-method">
-                                    <div class="method-icon linkedin">
-                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="method-details">
-                                        <span class="method-label">LinkedIn</span>
-                                        <span class="method-value">Connect with me</span>
-                                    </div>
-                                    <i class="fas fa-arrow-right method-arrow" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://github.com/ahmedmustafa28" target="_blank" rel="noopener noreferrer" class="contact-method">
-                                    <div class="method-icon github">
-                                        <i class="fab fa-github" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="method-details">
-                                        <span class="method-label">GitHub</span>
-                                        <span class="method-value">Check out my code</span>
-                                    </div>
-                                    <i class="fas fa-arrow-right method-arrow" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <div class="contact-location">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <span>Hyderabad, Sindh, Pakistan</span>
-                            </div>
+                <div class="terminal-window contact-terminal-full">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
+                        <span class="terminal-title">contact.py</span>
                     </div>
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xdadrqoa" method="POST" novalidate>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Your Name <span class="required">*</span></label>
-                                    <input type="text" id="name" name="name" required autocomplete="name" placeholder="John Doe">
-                                    <span class="error-message" aria-live="polite"></span>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="comment"># Contact Ahmed Mustafa</span>
+<span class="line-number">2</span>  <span class="comment"># Let's build something amazing together!</span>
+<span class="line-number">3</span>  
+<span class="line-number">4</span>  <span class="variable">contact_info</span> <span class="operator">=</span> <span class="bracket">{</span>
+<span class="line-number">5</span>      <span class="string">"email"</span><span class="colon">:</span> <span class="string">"bhurgrimustafa203@gmail.com"</span><span class="comma">,</span>
+<span class="line-number">6</span>      <span class="string">"linkedin"</span><span class="colon">:</span> <span class="string">"ahmed-mustafa-baa587290"</span><span class="comma">,</span>
+<span class="line-number">7</span>      <span class="string">"github"</span><span class="colon">:</span> <span class="string">"ahmedmustafa28"</span><span class="comma">,</span>
+<span class="line-number">8</span>      <span class="string">"location"</span><span class="colon">:</span> <span class="string">"Hyderabad, Sindh, Pakistan"</span>
+<span class="line-number">9</span>  <span class="bracket">}</span></code></pre>
+                        <div class="terminal-contact-links">
+                            <a href="mailto:bhurgrimustafa203@gmail.com" class="terminal-btn contact-btn">
+                                <i class="fas fa-envelope"></i> Send Email
+                            </a>
+                            <a href="https://www.linkedin.com/in/ahmed-mustafa-baa587290/" target="_blank" rel="noopener noreferrer" class="terminal-btn contact-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/ahmedmustafa28" target="_blank" rel="noopener noreferrer" class="terminal-btn contact-btn github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                        <pre class="code-block"><code><span class="line-number">10</span> 
+<span class="line-number">11</span> <span class="keyword">def</span> <span class="variable">send_message</span><span class="bracket">(</span><span class="variable">name</span><span class="comma">,</span> <span class="variable">email</span><span class="comma">,</span> <span class="variable">subject</span><span class="comma">,</span> <span class="variable">message</span><span class="bracket">)</span><span class="colon">:</span>
+<span class="line-number">12</span>     <span class="string">"""Send a message to Ahmed"""</span></code></pre>
+                        <div class="terminal-form-wrapper">
+                            <form class="terminal-form" id="contact-form" action="https://formspree.io/f/xdadrqoa" method="POST" novalidate>
+                                <div class="terminal-form-row">
+                                    <div class="terminal-input-group">
+                                        <span class="input-label"><span class="variable">name</span> <span class="operator">=</span></span>
+                                        <input type="text" id="name" name="name" required autocomplete="name" placeholder='"Your Name"'>
+                                    </div>
+                                    <div class="terminal-input-group">
+                                        <span class="input-label"><span class="variable">email</span> <span class="operator">=</span></span>
+                                        <input type="email" id="email" name="email" required autocomplete="email" placeholder='"you@example.com"'>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="email">Your Email <span class="required">*</span></label>
-                                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="john@example.com">
-                                    <span class="error-message" aria-live="polite"></span>
+                                <div class="terminal-input-group">
+                                    <span class="input-label"><span class="variable">subject</span> <span class="operator">=</span></span>
+                                    <input type="text" id="subject" name="subject" required placeholder='"Message Subject"'>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject <span class="required">*</span></label>
-                                <input type="text" id="subject" name="subject" required placeholder="What's this about?">
-                                <span class="error-message" aria-live="polite"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message <span class="required">*</span></label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, opportunity, or just say hi..."></textarea>
-                                <span class="error-message" aria-live="polite"></span>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-submit">
-                                <span class="btn-text">Send Message</span>
-                                <span class="btn-loading" aria-hidden="true">
-                                    <i class="fas fa-spinner fa-spin"></i>
-                                    Sending...
-                                </span>
-                                <i class="fas fa-paper-plane btn-icon" aria-hidden="true"></i>
-                            </button>
-                        </form>
+                                <div class="terminal-input-group">
+                                    <span class="input-label"><span class="variable">message</span> <span class="operator">=</span></span>
+                                    <textarea id="message" name="message" rows="4" required placeholder='"Your message here..."'></textarea>
+                                </div>
+                                <button type="submit" class="terminal-btn submit-btn">
+                                    <i class="fas fa-paper-plane"></i> <span class="keyword">return</span> send<span class="bracket">(</span>message<span class="bracket">)</span>
+                                </button>
+                            </form>
+                        </div>
+                        <pre class="code-block"><code><span class="line-number">13</span> 
+<span class="line-number">14</span> <span class="comment"># Ready to collaborate? Run: send_message()</span></code></pre>
+                        <div class="terminal-cursor"></div>
                     </div>
                 </div>
             </div>
@@ -787,6 +730,6 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-    <script src="js/main.js?v=4.0"></script>
+    <script src="js/main.js?v=5.3"></script>
 </body>
 </html>

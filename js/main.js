@@ -326,7 +326,8 @@ const revealElements = () => {
         .terminal-window,
         .project-card,
         .skill-category,
-        .soft-skills,
+        .concept-item,
+        .tool-card,
         .certificate-card,
         .contact-card,
         .contact-form-wrapper
@@ -340,7 +341,7 @@ const revealElements = () => {
     });
 
     // Add stagger class to grid containers
-    document.querySelectorAll('.projects-grid, .certificates-grid, .skills-grid').forEach(el => {
+    document.querySelectorAll('.projects-grid, .certificates-grid, .skills-grid, .concepts-grid, .tools-grid').forEach(el => {
         el.classList.add('reveal-stagger');
     });
 
