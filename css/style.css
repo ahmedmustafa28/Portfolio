@@ -454,6 +454,20 @@ strong {
     font-weight: 500;
 }
 
+/* Hero Code Accent Styles */
+.code-accent {
+    color: var(--primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+}
+
+.code-comment {
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
 .hero-description {
     font-size: 1rem;
     color: var(--text-secondary);
@@ -977,6 +991,14 @@ section {
 .code-block .bash-prompt { color: #4ade80; }
 .code-block .bash-cmd { color: #f472b6; }
 .code-block .bash-flag { color: #fbbf24; }
+
+/* Markdown syntax */
+.code-block .md-heading { color: #7dd3fc; font-weight: 600; }
+.code-block .md-text { color: #e2e8f0; }
+.code-block .md-list { color: #a5d6a7; }
+.code-block .md-code { color: #fbbf24; }
+.code-block .md-value { color: #e2e8f0; }
+.code-block .md-highlight { color: #4ade80; font-weight: 600; }
 
 /* Compact terminal style for headers */
 .terminal-body.compact {

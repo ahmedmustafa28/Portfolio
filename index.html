@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=5.3">
+    <link rel="stylesheet" href="css/style.css?v=5.4">
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
@@ -72,39 +72,38 @@
         <section class="hero" id="home" aria-labelledby="hero-heading">
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="greeting">Hi, I'm</p>
+                    <p class="greeting"><span class="code-accent">const</span> developer <span class="code-accent">=</span></p>
                     <h1 class="name" id="hero-heading">Ahmed Mustafa</h1>
                     <h2 class="tagline">
-                        Where <span class="highlight" id="dynamic-text">code meets creativity</span>
+                        <span class="code-accent">{</span> <span class="highlight" id="dynamic-text">code meets creativity</span> <span class="code-accent">}</span>
                     </h2>
                     <p class="hero-description">
-                        🚀 Aspiring <strong>Software Engineer</strong> & <strong>Machine Learning Enthusiast</strong> at MUET. 
+                        <span class="code-comment">// Aspiring Software Engineer & ML Enthusiast at MUET</span><br>
                         I transform complex problems into elegant solutions through code. Passionate about 
-                        <strong>AI, Data Science,</strong> and building impactful tech that makes a difference. 
-                        Currently crafting the future, one algorithm at a time.
+                        <strong>AI, Data Science,</strong> and building impactful tech that makes a difference.
                     </p>
                     <div class="hero-cta">
                         <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            <i class="fab fa-github" aria-hidden="true"></i>
                             View My Work
                         </a>
                         <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            <i class="fas fa-terminal" aria-hidden="true"></i>
                             Get In Touch
                         </a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat-item">
-                            <span class="stat-number">2+</span>
-                            <span class="stat-label">Years at MUET</span>
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Projects Built</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">Director</span>
-                            <span class="stat-label">of Visuals</span>
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Certifications</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">Tech +</span>
-                            <span class="stat-label">Creative</span>
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Days of ML</span>
                         </div>
                     </div>
                 </div>
@@ -138,48 +137,44 @@
         <section class="about" id="about" aria-labelledby="about-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">Get to Know Me</span>
+                    <span class="section-label">// about.md</span>
                     <h2 class="section-title" id="about-heading">About Me</h2>
+                    <p class="section-description">Get to know the person behind the code.</p>
                 </header>
-                <div class="about-content">
-                    <div class="about-image">
-                        <div class="image-frame">
-                            <img src="images/Profile.png" alt="Ahmed Mustafa" class="about-photo">
+                <div class="terminal-window about-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
                         </div>
+                        <span class="terminal-title">README.md</span>
                     </div>
-                    <div class="about-text">
-                        <h3>Technical Mind, Creative Heart</h3>
-                        <p>
-                            I'm a <strong>Software Engineering</strong> student at Mehran University of 
-                            Engineering and Technology (MUET), building a strong foundation in 
-                            <strong>programming, data structures, and problem-solving</strong>. What makes me different? 
-                            I don't just write code—I think about how technology can solve real-world problems.
-                        </p>
-                        <p>
-                            As <strong>Director of Visuals at WOH Sindh Chapter</strong>, I lead visual content creation 
-                            and design strategy, managing a team of creative professionals. I coordinate with cross-functional 
-                            teams to develop compelling visual narratives for events and campaigns, while mentoring junior 
-                            members in design principles and visual communication.
-                        </p>
-                        <p>
-                            This unique blend of <strong>technical leadership</strong> and <strong>creative execution</strong> 
-                            allows me to approach problems from multiple angles. I'm actively seeking <strong>internship 
-                            opportunities</strong> to apply and expand my skills in a professional environment.
-                        </p>
-                        <div class="about-highlights">
-                            <div class="highlight-item">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                                <span>Hyderabad, Sindh, Pakistan</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                                <span>B.E. Software Engineering, MUET (2027)</span>
-                            </div>
-                            <div class="highlight-item">
-                                <i class="fas fa-briefcase" aria-hidden="true"></i>
-                                <span>Actively seeking internships</span>
-                            </div>
-                        </div>
+                    <div class="terminal-body">
+                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="md-heading"># Ahmed Mustafa</span>
+<span class="line-number">2</span>  
+<span class="line-number">3</span>  <span class="md-heading">## Technical Mind, Creative Heart</span>
+<span class="line-number">4</span>  
+<span class="line-number">5</span>  <span class="md-text">Software Engineering student at **Mehran University (MUET)**,</span>
+<span class="line-number">6</span>  <span class="md-text">building expertise in **programming**, **data structures**, and</span>
+<span class="line-number">7</span>  <span class="md-text">**problem-solving**. I don't just write code—I craft solutions.</span>
+<span class="line-number">8</span>  
+<span class="line-number">9</span>  <span class="md-heading">## Leadership & Creativity</span>
+<span class="line-number">10</span> 
+<span class="line-number">11</span> <span class="md-text">As **Director of Visuals** at WOH Sindh Chapter:</span>
+<span class="line-number">12</span> <span class="md-list">- Lead visual content creation & design strategy</span>
+<span class="line-number">13</span> <span class="md-list">- Manage cross-functional creative teams</span>
+<span class="line-number">14</span> <span class="md-list">- Mentor junior members in design principles</span>
+<span class="line-number">15</span> 
+<span class="line-number">16</span> <span class="md-heading">## Quick Facts</span>
+<span class="line-number">17</span> 
+<span class="line-number">18</span> <span class="md-code">📍 Location:</span> <span class="md-value">Hyderabad, Sindh, Pakistan</span>
+<span class="line-number">19</span> <span class="md-code">🎓 Education:</span> <span class="md-value">B.E. Software Engineering, MUET (2027)</span>
+<span class="line-number">20</span> <span class="md-code">💼 Status:</span>   <span class="md-highlight">Actively seeking internships</span>
+<span class="line-number">21</span> 
+<span class="line-number">22</span> <span class="md-text">---</span>
+<span class="line-number">23</span> <span class="md-text">*Blending **technical leadership** with **creative execution***</span></code></pre>
+                        <div class="terminal-cursor"></div>
                     </div>
                 </div>
             </div>
@@ -247,8 +242,9 @@
         <section class="experience" id="experience" aria-labelledby="experience-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">// career.log</span>
+                    <span class="section-label">// experience.json</span>
                     <h2 class="section-title" id="experience-heading">Experience</h2>
+                    <p class="section-description">My professional journey and contributions.</p>
                 </header>
                 <div class="terminal-window">
                     <div class="terminal-header">
@@ -730,6 +726,6 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-    <script src="js/main.js?v=5.3"></script>
+    <script src="js/main.js?v=5.4"></script>
 </body>
 </html>
