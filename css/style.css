@@ -857,153 +857,137 @@ section {
     margin-top: 8px;
 }
 
-/* ===== Experience Section ===== */
+/* ===== Experience Section - Terminal Style ===== */
 .experience {
     background: var(--bg-secondary);
 }
 
-.experience-timeline {
-    max-width: 800px;
+.terminal-window {
+    max-width: 900px;
     margin: 0 auto;
+    background: #1a1b26;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+    border: 1px solid #2a2b3d;
 }
 
-.experience-item {
-    display: flex;
-    gap: 24px;
+[data-theme="light"] .terminal-window {
+    background: #1e1e2e;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-.exp-marker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.exp-dot {
-    width: 14px;
-    height: 14px;
-    background: var(--primary);
-    border-radius: 50%;
-    border: 3px solid var(--bg-secondary);
-    box-shadow: 0 0 0 3px var(--primary);
-}
-
-.exp-line {
-    width: 2px;
-    flex: 1;
-    background: var(--border);
-    margin: 8px 0;
-}
-
-.exp-card {
-    flex: 1;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    margin-bottom: 24px;
-    transition: var(--transition);
-}
-
-.exp-card:hover {
-    border-color: var(--primary);
-}
-
-.exp-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.exp-title-group h3 {
-    font-size: 1.2rem;
-    margin-bottom: 4px;
-}
-
-.exp-title-group h4 {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-}
-
-.exp-meta {
+.terminal-header {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: #16161e;
+    border-bottom: 1px solid #2a2b3d;
 }
 
-.exp-badge {
-    font-size: 0.75rem;
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-weight: 500;
-}
-
-.exp-badge.current {
-    background: rgba(16, 185, 129, 0.15);
-    color: var(--success);
-}
-
-.exp-date {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.exp-location {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.exp-summary {
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-    line-height: 1.6;
-}
-
-.exp-achievements {
-    margin-bottom: 20px;
-}
-
-.exp-achievements li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-.exp-achievements li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 8px;
-    width: 6px;
-    height: 6px;
-    background: var(--primary);
-    border-radius: 50%;
-}
-
-.exp-achievements strong {
-    color: var(--text-primary);
-}
-
-.exp-skills {
+.terminal-dots {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
 }
 
-.exp-skills span {
+.terminal-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-dots .dot.red { background: #ff5f57; }
+.terminal-dots .dot.yellow { background: #febc2e; }
+.terminal-dots .dot.green { background: #28c840; }
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-right: 60px;
+}
+
+.terminal-body {
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.code-block {
+    margin: 0;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    tab-size: 2;
+}
+
+.code-block code {
+    display: block;
+    white-space: pre;
+}
+
+/* Line numbers */
+.line-number {
+    display: inline-block;
+    width: 28px;
+    color: #4a5568;
+    text-align: right;
+    margin-right: 20px;
+    user-select: none;
     font-size: 0.8rem;
-    background: var(--bg-tertiary);
-    color: var(--text-secondary);
-    padding: 6px 14px;
-    border-radius: 50px;
+}
+
+/* Syntax highlighting colors */
+.code-block .bracket { color: #ffd700; }
+.code-block .key { color: #7dd3fc; }
+.code-block .colon { color: #9ca3af; }
+.code-block .string { color: #a5d6a7; }
+.code-block .keyword { color: #c084fc; font-weight: 600; }
+.code-block .comma { color: #9ca3af; }
+.code-block .comment { color: #6b7280; font-style: italic; }
+
+/* Blinking cursor */
+.terminal-cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #7c3aed;
+    margin-left: 4px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .terminal-window {
+        border-radius: 8px;
+        margin: 0 -12px;
+    }
+    
+    .terminal-body {
+        padding: 16px 12px;
+    }
+    
+    .code-block {
+        font-size: 0.75rem;
+        line-height: 1.7;
+    }
+    
+    .line-number {
+        width: 20px;
+        margin-right: 12px;
+        font-size: 0.7rem;
+    }
+    
+    .terminal-title {
+        font-size: 0.75rem;
+    }
 }
 
 /* ===== Projects Section ===== */
@@ -2015,14 +1999,6 @@ a.certificate-card {
     
     .education-card {
         flex-direction: column;
-    }
-    
-    .experience-item {
-        gap: 16px;
-    }
-    
-    .exp-card {
-        padding: 20px;
     }
 }
 

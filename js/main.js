@@ -323,7 +323,7 @@ const revealElements = () => {
         .hero-visual,
         .about-content > *,
         .education-card,
-        .experience-item,
+        .terminal-window,
         .project-card,
         .skill-category,
         .soft-skills,
