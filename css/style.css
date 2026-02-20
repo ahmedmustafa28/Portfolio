@@ -2382,6 +2382,8 @@ a.certificate-card {
     
     .hero-visual {
         order: -1;
+        flex-direction: column;
+        align-items: center;
     }
     
     .profile-card {
@@ -2394,6 +2396,7 @@ a.certificate-card {
         flex-direction: row;
         justify-content: center;
         margin-top: 24px;
+        width: 100%;
     }
     
     .social-line {
@@ -2502,13 +2505,27 @@ a.certificate-card {
         min-height: auto;
     }
     
-    .profile-photo {
-        width: 220px;
-        height: 220px;
+    .hero-visual {
+        flex-direction: column;
+        align-items: center;
     }
     
     .profile-card {
-        padding: 24px;
+        margin: 0 auto;
+    }
+    
+    .social-sidebar {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 20px;
+        right: auto;
+    }
+    
+    .profile-photo {
+        width: 220px;
+        height: 220px;
     }
     
     .hero-stats {
