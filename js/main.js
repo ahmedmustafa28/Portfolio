@@ -429,14 +429,94 @@ if ('IntersectionObserver' in window) {
 
 // ===== Console Message =====
 console.log(`
-%c👋 Hey there!
-%cThanks for checking out my portfolio.
-%cLooking for someone to build something great? Let's connect!
+%c🚀 Hey there, Developer!
+%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+%cThanks for exploring my portfolio.
+%cBuilt with passion + neon vibes ✨
 
-📧 bhurgrimustafa203@gmail.com
-💼 linkedin.com/in/ahmed-mustafa
+%c📧 bhurgrimustafa203@gmail.com
+%c💼 linkedin.com/in/ahmed-mustafa
+%c🌐 github.com/ahmed-mustafa
 `, 
-'font-size: 20px; font-weight: bold; color: #6366f1;',
-'font-size: 14px; color: #94a3b8;',
-'font-size: 12px; color: #64748b;'
+'font-size: 18px; font-weight: bold; color: #00F5D4; text-shadow: 0 0 10px #00F5D4;',
+'color: #A855F7;',
+'font-size: 13px; color: #F9FAFB;',
+'font-size: 12px; color: #A855F7;',
+'font-size: 11px; color: #00F5D4;',
+'font-size: 11px; color: #00F5D4;',
+'font-size: 11px; color: #00F5D4;'
 );
+
+// ===== Enhanced Neon Glow Animation on Scroll =====
+const addNeonInteractivity = () => {
+    // Add glow pulse to nav links on hover
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            link.style.animation = 'neon-pulse 1.5s ease-in-out infinite';
+        });
+        link.addEventListener('mouseleave', () => {
+            link.style.animation = '';
+        });
+    });
+
+    // Add magnetic effect to buttons 
+    document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width - 0.5) * 20;
+            const y = ((e.clientY - rect.top) / rect.height - 0.5) * 20;
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
+
+    // Add parallax to hero section
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const heroContent = hero.querySelector('.hero-content');
+            if (heroContent && scrolled < window.innerHeight) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                heroContent.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
+            }
+        }, { passive: true });
+    }
+};
+
+// Initialize neon interactivity
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(addNeonInteractivity, 200);
+});
+
+// ===== Card Tilt Effect =====
+const addTiltEffect = () => {
+    const cards = document.querySelectorAll('.project-card, .certificate-card, .skill-category');
+    
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+    });
+};
+
+// Initialize tilt effect
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(addTiltEffect, 300);
+});
