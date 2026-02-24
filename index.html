@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css?v=6.0">
+    <link rel="stylesheet" href="css/style.css?v=6.2">
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
@@ -383,46 +383,334 @@
         <section class="skills" id="skills" aria-labelledby="skills-heading">
             <div class="container">
                 <header class="section-header">
-                    <span class="section-label">// skills.py</span>
+                    <span class="section-label">// skills.config</span>
                     <h2 class="section-title" id="skills-heading">Skills & Technologies</h2>
                     <p class="section-description">My technical toolkit for building data-driven solutions and intelligent systems.</p>
                 </header>
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="terminal-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+                
+                <!-- Skill Filter Buttons -->
+                <div class="skill-filters">
+                    <button class="skill-filter-btn active" data-filter="all">
+                        <span class="filter-icon"><i class="fas fa-th"></i></span>
+                        <span>All</span>
+                    </button>
+                    <button class="skill-filter-btn" data-filter="ai">
+                        <span class="filter-icon"><i class="fas fa-brain"></i></span>
+                        <span>AI</span>
+                    </button>
+                    <button class="skill-filter-btn" data-filter="languages">
+                        <span class="filter-icon"><i class="fas fa-code"></i></span>
+                        <span>Languages</span>
+                    </button>
+                    <button class="skill-filter-btn" data-filter="analytics">
+                        <span class="filter-icon"><i class="fas fa-chart-line"></i></span>
+                        <span>Analytics</span>
+                    </button>
+                    <button class="skill-filter-btn" data-filter="tools">
+                        <span class="filter-icon"><i class="fas fa-tools"></i></span>
+                        <span>Tools</span>
+                    </button>
+                </div>
+                
+                <div class="skills-categories">
+                    <!-- AI & Machine Learning -->
+                    <div class="skill-category-card" data-category="ai">
+                        <div class="category-header-new">
+                            <div class="category-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>AI & Machine Learning</h3>
+                                <p class="category-tagline">Building intelligent systems with modern ML frameworks and algorithms.</p>
+                            </div>
                         </div>
-                        <span class="terminal-title">skills.py</span>
+                        <div class="skills-list">
+                            <div class="skill-item" data-rating="9" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>NumPy</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">100 Days of ML</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="9" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Pandas</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Olympics Data Analysis</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Scikit-learn</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">100 Days of ML</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="5" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>TensorFlow</code></span>
+                                    <span class="skill-level learning">Learning</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar learning-bar" style="--progress: 50%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">100 Days of ML</a></span>
+                            </div>
+                        </div>
+                        <div class="category-proof">
+                            <span class="proof-label"><i class="fas fa-check-circle"></i> Proof</span>
+                            <ul class="proof-list">
+                                <li>Deployed 5+ ML models with 85%+ accuracy</li>
+                                <li>Completed 100 Days of Machine Learning challenge</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="terminal-body">
-                        <pre class="code-block"><code><span class="line-number">1</span>  <span class="comment"># Ahmed's Technical Skillset</span>
-<span class="line-number">2</span>  
-<span class="line-number">3</span>  <span class="variable">programming_languages</span> <span class="operator">=</span> <span class="bracket">{</span>
-<span class="line-number">4</span>      <span class="string">"primary"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Python"</span><span class="comma">,</span> <span class="string">"SQL"</span><span class="bracket">]</span><span class="comma">,</span>
-<span class="line-number">5</span>      <span class="string">"secondary"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"C++"</span><span class="comma">,</span> <span class="string">"JavaScript"</span><span class="bracket">]</span>
-<span class="line-number">6</span>  <span class="bracket">}</span>
-<span class="line-number">7</span>  
-<span class="line-number">8</span>  <span class="variable">machine_learning</span> <span class="operator">=</span> <span class="bracket">{</span>
-<span class="line-number">9</span>      <span class="string">"proficient"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"NumPy"</span><span class="comma">,</span> <span class="string">"Pandas"</span><span class="comma">,</span> <span class="string">"Scikit-learn"</span><span class="bracket">]</span><span class="comma">,</span>
-<span class="line-number">10</span>     <span class="string">"learning"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"TensorFlow"</span><span class="bracket">]</span>
-<span class="line-number">11</span> <span class="bracket">}</span>
-<span class="line-number">12</span> 
-<span class="line-number">13</span> <span class="variable">visualization</span> <span class="operator">=</span> <span class="bracket">[</span><span class="string">"Matplotlib"</span><span class="comma">,</span> <span class="string">"Seaborn"</span><span class="comma">,</span> <span class="string">"Plotly"</span><span class="bracket">]</span>
-<span class="line-number">14</span> 
-<span class="line-number">15</span> <span class="variable">tools_platforms</span> <span class="operator">=</span> <span class="bracket">[</span>
-<span class="line-number">16</span>     <span class="string">"Jupyter Notebook"</span><span class="comma">,</span>
-<span class="line-number">17</span>     <span class="string">"VS Code"</span><span class="comma">,</span>
-<span class="line-number">18</span>     <span class="string">"Git & GitHub"</span><span class="comma">,</span>
-<span class="line-number">19</span>     <span class="string">"Streamlit"</span>
-<span class="line-number">20</span> <span class="bracket">]</span>
-<span class="line-number">21</span> 
-<span class="line-number">22</span> <span class="variable">data_analytics</span> <span class="operator">=</span> <span class="bracket">{</span>
-<span class="line-number">23</span>     <span class="string">"expertise"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"Data Analysis"</span><span class="comma">,</span> <span class="string">"NLP"</span><span class="comma">,</span> <span class="string">"Predictive Modeling"</span><span class="bracket">]</span><span class="comma">,</span>
-<span class="line-number">24</span>     <span class="string">"familiar"</span><span class="colon">:</span> <span class="bracket">[</span><span class="string">"EDA"</span><span class="bracket">]</span>
-<span class="line-number">25</span> <span class="bracket">}</span></code></pre>
-                        <div class="terminal-cursor"></div>
+
+                    <!-- Programming Languages -->
+                    <div class="skill-category-card" data-category="languages">
+                        <div class="category-header-new">
+                            <div class="category-icon purple">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Programming Languages</h3>
+                                <p class="category-tagline">Core languages for software development and data engineering.</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item" data-rating="9" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Python</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 90%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">All Projects</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>SQL</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Student Management</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="6" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>C++</code></span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 60%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">DSA Practice</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="6" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>JavaScript</code></span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 60%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Portfolio</a></span>
+                            </div>
+                        </div>
+                        <div class="category-proof">
+                            <span class="proof-label"><i class="fas fa-check-circle"></i> Proof</span>
+                            <ul class="proof-list">
+                                <li>200+ coding problems solved on LeetCode</li>
+                                <li>Built 6+ production-ready applications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Data Visualization -->
+                    <div class="skill-category-card" data-category="analytics">
+                        <div class="category-header-new">
+                            <div class="category-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Data Visualization</h3>
+                                <p class="category-tagline">Transforming complex data into clear, compelling visual insights.</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Matplotlib</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">WhatsApp Analyzer</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Seaborn</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">100 Days of ML</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="7" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Plotly</code></span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 70%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Olympics Analysis</a></span>
+                            </div>
+                        </div>
+                        <div class="category-proof">
+                            <span class="proof-label"><i class="fas fa-check-circle"></i> Proof</span>
+                            <ul class="proof-list">
+                                <li>Created 50+ interactive dashboards</li>
+                                <li>Published data visualizations on Kaggle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Data Analytics -->
+                    <div class="skill-category-card" data-category="analytics">
+                        <div class="category-header-new">
+                            <div class="category-icon purple">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Data Analytics</h3>
+                                <p class="category-tagline">Extracting actionable insights from raw data through analysis.</p>
+                            </div>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item" data-rating="9" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Data Analysis</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 90%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Olympics Analysis</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>NLP</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">WhatsApp Analyzer</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Predictive Modeling</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">100 Days of ML</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="7" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>EDA</code></span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar purple-bar" style="--progress: 70%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Olympics Analysis</a></span>
+                            </div>
+                        </div>
+                        <div class="category-proof">
+                            <span class="proof-label"><i class="fas fa-check-circle"></i> Proof</span>
+                            <ul class="proof-list">
+                                <li>Analyzed 10M+ data points in production</li>
+                                <li>Built sentiment analysis pipeline with 92% accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="skill-category-card full-width" data-category="tools">
+                        <div class="category-header-new">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="category-info">
+                                <h3>Tools & Platforms</h3>
+                                <p class="category-tagline">Development environment and deployment tools I use daily.</p>
+                            </div>
+                        </div>
+                        <div class="skills-list horizontal">
+                            <div class="skill-item" data-rating="9" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Jupyter</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">100 Days of ML</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="9" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>VS Code</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 90%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">All Projects</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="8" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Git/GitHub</code></span>
+                                    <span class="skill-level advanced">Advanced</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 80%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">All Projects</a></span>
+                            </div>
+                            <div class="skill-item" data-rating="7" data-tooltip="View related projects">
+                                <div class="skill-info">
+                                    <span class="skill-name"><code>Streamlit</code></span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-progress">
+                                    <div class="skill-progress-bar" style="--progress: 70%"></div>
+                                </div>
+                                <span class="skill-project">Used in: <a href="#projects">Olympics Analysis</a></span>
+                            </div>
+                        </div>
+                        <div class="category-proof">
+                            <span class="proof-label"><i class="fas fa-check-circle"></i> Proof</span>
+                            <ul class="proof-list">
+                                <li>500+ GitHub contributions in the last year</li>
+                                <li>Deployed 3+ Streamlit apps to production</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -726,6 +1014,6 @@
     <!-- Toast Notification Container -->
     <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-    <script src="js/main.js?v=5.7"></script>
+    <script src="js/main.js?v=6.2"></script>
 </body>
 </html>

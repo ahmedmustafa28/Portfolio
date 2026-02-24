@@ -326,6 +326,7 @@ const revealElements = () => {
         .terminal-window,
         .project-card,
         .skill-category,
+        .skill-category-card,
         .concept-item,
         .tool-card,
         .certificate-card,
@@ -341,7 +342,7 @@ const revealElements = () => {
     });
 
     // Add stagger class to grid containers
-    document.querySelectorAll('.projects-grid, .certificates-grid, .skills-grid, .concepts-grid, .tools-grid').forEach(el => {
+    document.querySelectorAll('.projects-grid, .certificates-grid, .skills-grid, .skills-categories, .concepts-grid, .tools-grid').forEach(el => {
         el.classList.add('reveal-stagger');
     });
 
@@ -367,10 +368,75 @@ const revealElements = () => {
     });
 };
 
+// ===== Skill Progress Bar Animation =====
+const animateSkillBars = () => {
+    const skillItems = document.querySelectorAll('.skill-item');
+    
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add animate class to trigger the progress bar animation
+                entry.target.classList.add('animate');
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    skillItems.forEach(item => {
+        skillObserver.observe(item);
+    });
+};
+
+// ===== Skill Category Filtering =====
+const initSkillFilters = () => {
+    const filterButtons = document.querySelectorAll('.skill-filter-btn');
+    const categoryCards = document.querySelectorAll('.skill-category-card');
+    
+    if (!filterButtons.length || !categoryCards.length) return;
+    
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.dataset.filter;
+            
+            categoryCards.forEach((card, index) => {
+                const category = card.dataset.category;
+                
+                if (filter === 'all' || category === filter) {
+                    // Show matching cards with stagger delay
+                    card.classList.remove('hidden');
+                    card.style.transitionDelay = `${index * 0.1}s`;
+                    
+                    // Re-trigger skill animations
+                    const skillItems = card.querySelectorAll('.skill-item');
+                    skillItems.forEach((item, i) => {
+                        item.classList.remove('animate');
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, (index * 100) + (i * 100));
+                    });
+                } else {
+                    // Hide non-matching cards
+                    card.classList.add('hidden');
+                    card.style.transitionDelay = '0s';
+                }
+            });
+        });
+    });
+};
+
 // Initialize reveal animations after DOM load
 document.addEventListener('DOMContentLoaded', () => {
     // Small delay to ensure styles are applied
     setTimeout(revealElements, 100);
+    setTimeout(animateSkillBars, 200);
+    initSkillFilters();
 });
 
 // ===== Keyboard Navigation =====
